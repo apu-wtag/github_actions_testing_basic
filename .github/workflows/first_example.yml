@@ -10,8 +10,8 @@ jobs:
 
       - name: Welcome message
         run: |
-        echo "Hello world"
-        echo "listing files"
-        ls -la
-        echo "cating readme"
-        cat README.md
+         echo "Hello world"
+         echo "listing files"
+         ls -la
+         echo "cating readme"
+         cat README.md
