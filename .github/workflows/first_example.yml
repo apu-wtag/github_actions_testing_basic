@@ -8,10 +8,14 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
 
-      - name: Welcome message
+      - name: List and Read files
         run: |
          echo "Hello world"
          echo "listing files"
          ls -la
          echo "cating readme"
          cat README.md
+      
+      - name: generate ascii artwork
+        run: cosway -f dragon "Runn for cover, I am a dragon....RAWR" >> dragon.txt
+
