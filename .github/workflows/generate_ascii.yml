@@ -1,22 +1,23 @@
 name: generate_ascii
 on: push
 jobs: 
-  runs-on: ubuntu-latest
-  steps: 
-    - name: checkout code
-      uses: actions/checkout@v4
+  generate_ascii: 
+   runs-on: ubuntu-latest
+   steps: 
+     - name: checkout code
+       uses: actions/checkout@v4
 
-    - name: install cowsay program
-      run: sudo apt-get install cowsay -y
+     - name: install cowsay program
+       run: sudo apt-get install cowsay -y
 
-    - name: execute the code
-      run: cowsay -f dragon "Runn for cover, I am a dragon....RAWR" >> dragon.txt
+     - name: execute the code
+       run: cowsay -f dragon "Runn for cover, I am a dragon....RAWR" >> dragon.txt
 
-    - name: test if file exists
-      run: grep -u "dragon" dragon.txt
+     - name: test if file exists
+       run: grep -u "dragon" dragon.txt
 
-    - name: read file
-      run: cat dragon.txt
+     - name: read file
+       run: cat dragon.txt
     
-    - name: checkout repo files
-      run: ls -la
+     - name: checkout repo files
+       run: ls -la
