@@ -12,9 +12,5 @@ jobs:
         run: ls 
 
       - name: read files
-        run: |
-        sudo apt-get update
-        sudo apt-get install -y git
-        git clone git@github.com:apu-wtag/github_actions_testing_basic.git
-        cd github_actions_testing_basic
-        cat README.md
+        uses: actions/checkout@v4
+        run: cat README.md
