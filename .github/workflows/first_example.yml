@@ -17,5 +17,8 @@ jobs:
          cat README.md
       
       - name: generate ascii artwork
-        run: cosway -f dragon "Runn for cover, I am a dragon....RAWR" >> dragon.txt
+        run: |
+         sudo apt update
+         sudp apt install cosway
+         cowsay -f dragon "Runn for cover, I am a dragon....RAWR" >> dragon.txt
 
